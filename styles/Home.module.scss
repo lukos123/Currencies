@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  // width: 700px;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 664px) {
+    flex-direction: column;
+  }
+}

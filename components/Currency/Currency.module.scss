@@ -1,0 +1,60 @@
+.select {
+  // margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid black;
+  font-size: 25px;
+  font-weight: 700;
+  @media (max-width: 1450px) {
+    font-size: 20px;
+  }
+  @media (max-width: 1050px) {
+    font-size: 10px;
+  }
+}
+.Currency {
+  margin: 10px;
+  width: 700px;
+  height: 400px;
+  border: 2px solid black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: 1450px) {
+    width: 500px;
+    height: 300px;
+  }
+  @media (max-width: 1050px) {
+    width: 300px;
+    height: 200px;
+  }
+  @media (max-width: 664px) {
+    width: 400px;
+    height: 200px;
+  }
+  @media (max-width: 440px) {
+    width: 90%;
+    height: 200px;
+  }
+}
+.input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  @media (max-width: 1450px) {
+    font-size: 25px;
+  }
+  @media (max-width: 1050px) {
+    font-size: 15px;
+  }
+}
+.form {
+  width: 100%;
+}
