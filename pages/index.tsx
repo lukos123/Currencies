@@ -28,14 +28,18 @@ export default function Home({ currencies, setIsLoading }: props) {
   const [inputNumber2, setInputNumber2] = useState<number | undefined>(1);
   const [focusElement, setFocusElement] = useState<number>(2);
   useEffect(() => {
-    const temp1 = JSON.parse(
-      localStorage.getItem("currentCurrencies1") 
-    ) ?? "uah";
-    setCurrentCurrencies1(temp1);
-    const temp2 = JSON.parse(
-      localStorage.getItem("currentCurrencies2") 
-    ) ?? "usd";
-    setCurrentCurrencies2(temp2);
+    if (localStorage.getItem("currentCurrencies1")){
+      const temp1 = JSON.parse(
+        localStorage.getItem("currentCurrencies1")
+      );
+      setCurrentCurrencies1(temp1);
+    }
+    if (localStorage.getItem("currentCurrencies2")){
+      const temp2 = JSON.parse(
+        localStorage.getItem("currentCurrencies2") 
+      ) ;
+      setCurrentCurrencies2(temp2);
+    }
   }, []);
   const inputHandler1 = (e: { target: { value: string } }) => {
     setInputNumber1(e.target.value === "" ? undefined : Number(e.target.value));
