@@ -29,12 +29,12 @@ export default function Home({ currencies, setIsLoading }: props) {
   const [focusElement, setFocusElement] = useState<number>(2);
   useEffect(() => {
     const temp1 = JSON.parse(
-      localStorage.getItem("currentCurrencies1") ?? "uah"
-    );
+      localStorage.getItem("currentCurrencies1") 
+    ) ?? "uah";
     setCurrentCurrencies1(temp1);
     const temp2 = JSON.parse(
-      localStorage.getItem("currentCurrencies2") ?? "usd"
-    );
+      localStorage.getItem("currentCurrencies2") 
+    ) ?? "usd";
     setCurrentCurrencies2(temp2);
   }, []);
   const inputHandler1 = (e: { target: { value: string } }) => {
